@@ -10,16 +10,15 @@ a {
 .title-contents {
   width: 100vw;
   height: 40vw;
-  background-image: image-url('Reactivation-alert-header01.jpeg');
+  background-image: image-url('toppage-heder01.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
+  padding: 12vh 12vw;
+  color: #000;
 }
 
 .service-title {
@@ -296,4 +295,20 @@ a {
   font-size: 2vh;
 }
 
-/* //商品一覧 */
+.btn-wrap {
+  margin: 0 350px;
+  display: flex;
+}
+ 
+.btn {
+  background: #0099e8;
+  border: 2px solid transparent;
+  color:  #fff;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  max-width: 100%;
+  padding: 20px 20px;
+  text-align: center;
+  width: 300px;
+}
