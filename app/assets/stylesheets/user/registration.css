@@ -139,13 +139,13 @@
 
 .register-btn {
   width: 50%;
-  margin: 0 auto;
+  margin: 60px auto;
 }
 
 .register-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #0099e8;
+  border: 1px solid #0099e8;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
