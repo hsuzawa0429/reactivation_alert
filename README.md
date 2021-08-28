@@ -1,24 +1,45 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# テーブル設計
+## users テーブル
+| column             | Type    | Options     |
+| ------------------ | ------- | ----------- |
+| facility_code      | string  | null: false |
+| user_name          | string  | null: false |
+| encrypted_password | string  | null: false |
+| affiliation        | string  | null: false |
 
-Things you may want to cover:
+## Association
+- has_many: patients
 
-* Ruby version
+## patients テーブル
+| column                 | Type    | Options                   |
+| ---------------------- | ------- | ------------------------- |
+| patient_code           | integer | null: false, unique: true |
+| gender_id              | integer |                           |
+| age_id                 | integer |                           |
+| department_id          | integer | null: false               |
+| drug_id                | integer | null: false               |
+| monitoring_interval_id | integer | null: false               |
+| inspection_date        | date    | null: false               |
+| second                 | date    |                           |
+| second_check           | date    |                           |
+| third                  | date    |                           |
+| third_check            | date    |                           |
+| forth                  | date    |                           |
+| forth_check            | date    |                           |
+| fifth                  | date    |                           |
+| fifth_check            | date    |                           |
+| sixth                  | date    |                           |
+| sixth_check            | date    |                           |
+| seventh                | date    |                           |
+| seventh_check          | date    |                           |
+| eighth                 | date    |                           |
+| eighth_check           | date    |                           |
+| ninth                  | date    |                           |
+| ninth_check            | date    |                           |
+| tenth                  | date    |                           |
+| tenth_check            | date    |                           |
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Association
+- belongs_to: user
