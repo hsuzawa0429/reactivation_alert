@@ -6,6 +6,7 @@
 | ------------------ | ------- | ----------- |
 | facility_code      | string  | null: false |
 | user_name          | string  | null: false |
+| email              | string  | null: false |
 | encrypted_password | string  | null: false |
 | affiliation        | string  | null: false |
 
