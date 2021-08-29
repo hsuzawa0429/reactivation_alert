@@ -9,21 +9,21 @@ a {
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .title-contents {
   width: 100vw;
-  background-image: image-url('furima-header01.png');
+  height: 40vw;
+  background-image: image-url('toppage-heder01.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  padding: 12vh 12vw;
+  color: #000;
 }
 
 .service-title {
   font-size: 8vh;
+  font-weight: 900;
 }
 
 .service-explain {
@@ -31,25 +31,11 @@ a {
   line-height: 40px;
 }
 
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
-}
-
 /* //画面上部の「人生を変えるフリマアプリ」帯部分 */
 
 /* FURIMAが選ばれる3つの理由部分 */
 .select-reason-contents {
-  padding: 5vh 15vw;
+  padding: 10vh 15vw;
 }
 
 .select-reason-contents>.title {
@@ -72,14 +58,14 @@ a {
 }
 
 .reason-lists {
-  display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .reason-lists>.list {
-  width: 33vh;
-  display: flex;
+  padding: 30px 30px 0 30px;
+  width: 100%;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -114,8 +100,9 @@ a {
 }
 
 .reason-list-description {
-  font-size: 18px;
-  margin-top: 20px;
+  font-size: 12px;
+  text-align: right;
+  margin-bottom: 10vh;
 }
 
 /* //FURIMAが選ばれる3つの理由部分 */
@@ -307,5 +294,3 @@ a {
 .star-count {
   font-size: 2vh;
 }
-
-/* //商品一覧 */
