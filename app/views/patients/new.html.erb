@@ -1,2 +1,56 @@
-<h1>Patients#new</h1>
-<p>Find me in app/views/patients/new.html.erb</p>
+<%= render "shared/second-header"%>
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">患者情報入力</h2>
+    <%= form_with local: true do |f| %>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    <%# render 'shared/error_messages', model: f.object %>
+    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+
+    <%# 商品の詳細 %>
+      <div class="items-detail">
+        <div class="weight-bold-text"></div>
+          <div class="form">
+            <div class="weight-bold-text">
+              患者識別コード
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.text_area :patient_code, class:"select-box", id:"item-category" %>
+            <div class="weight-bold-text">
+              性別
+            </div>
+            <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <div class="weight-bold-text">
+              年齢
+            </div>
+            <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <div class="weight-bold-text">
+              診療科
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <div class="weight-bold-text">
+              リスク薬剤
+            </div>
+            <%= f.collection_select(:drug_id, Drug.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <div class="weight-bold-text">
+              予定検査間隔
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.collection_select(:monitoring_interval_id, MonitoringInterval.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <div class="weight-bold-text">
+              初回検査実施日
+              <span class="indispensable">必須</span>
+            </div>
+            <%= f.text_area :inspection_date, class:"select-box", id:"item-category" %>
+          </div>
+        </div>
+        <div class="sell-btn-contents">
+          <%= f.submit "新規登録" ,class:"sell-btn" %>
+          <%=link_to 'もどる', root_path, class:"back-btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<%= render "shared/second-footer"%>
