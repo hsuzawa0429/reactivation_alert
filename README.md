@@ -23,24 +23,33 @@
 | drug_id                | integer | null: false               |
 | monitoring_interval_id | integer | null: false               |
 | inspection_date        | date    | null: false               |
-| second                 | date    |                           |
-| second_check           | date    |                           |
-| third                  | date    |                           |
-| third_check            | date    |                           |
-| forth                  | date    |                           |
-| forth_check            | date    |                           |
-| fifth                  | date    |                           |
-| fifth_check            | date    |                           |
-| sixth                  | date    |                           |
-| sixth_check            | date    |                           |
-| seventh                | date    |                           |
-| seventh_check          | date    |                           |
-| eighth                 | date    |                           |
-| eighth_check           | date    |                           |
-| ninth                  | date    |                           |
-| ninth_check            | date    |                           |
-| tenth                  | date    |                           |
-| tenth_check            | date    |                           |
 
 ## Association
 - belongs_to: user
+- has_one: alert
+
+## alerts テーブル
+| column                 | Type       | Options                        |
+| ---------------------- | ---------- | ------------------------------ |
+| second                 | date       |                                |
+| second_check           | date       |                                |
+| third                  | date       |                                |
+| third_check            | date       |                                |
+| forth                  | date       |                                |
+| forth_check            | date       |                                |
+| fifth                  | date       |                                |
+| fifth_check            | date       |                                |
+| sixth                  | date       |                                |
+| sixth_check            | date       |                                |
+| seventh                | date       |                                |
+| seventh_check          | date       |                                |
+| eighth                 | date       |                                |
+| eighth_check           | date       |                                |
+| ninth                  | date       |                                |
+| ninth_check            | date       |                                |
+| tenth                  | date       |                                |
+| tenth_check            | date       |                                |
+| patient                | references | null: false, foreign_key: true |
+
+## Association
+- belongs_to: patient
