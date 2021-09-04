@@ -35,7 +35,7 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
     end
 
-    it 'affiliationが空では登録できない' do
+    it 'affiliation_idが空では登録できない' do
       @user.affiliation = ''
       @user.valid?
       expect(@user.errors.full_messages).to include("Affiliation can't be blank")

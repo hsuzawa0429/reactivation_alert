@@ -5,6 +5,6 @@ FactoryBot.define do
     email                 {'test@test.com'}
     password              {'test2021'}
     password_confirmation {password}
-    affiliation           {"消化器内科"}
+    affiliation        {'消化器内科'}
   end
 end
