@@ -4,11 +4,10 @@
     <h2 class="items-sell-title">患者情報入力</h2>
     <%= form_with local: true do |f| %>
 
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# render 'shared/error_messages', model: f.object %>
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+      <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+      <%# render 'shared/error_messages', model: f.object %>
+      <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
 
-    <%# 商品の詳細 %>
       <div class="items-detail">
         <div class="weight-bold-text"></div>
           <div class="form">
@@ -16,41 +15,42 @@
               患者識別コード
               <span class="indispensable">必須</span>
             </div>
-            <%= f.text_area :patient_code, class:"select-box", id:"item-category" %>
+            <%= f.text_area :patient_code, class:"input-default", id:"patient_code" %>
             <div class="weight-bold-text">
               性別
             </div>
-            <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"patient-gender"}) %>
             <div class="weight-bold-text">
               年齢
             </div>
-            <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"patient-age"}) %>
             <div class="weight-bold-text">
               診療科
               <span class="indispensable">必須</span>
             </div>
-            <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"patient-department"}) %>
             <div class="weight-bold-text">
               リスク薬剤
             </div>
-            <%= f.collection_select(:drug_id, Drug.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <%= f.collection_select(:drug_id, Drug.all, :id, :name, {}, {class:"select-box", id:"patient-drug"}) %>
             <div class="weight-bold-text">
               予定検査間隔
               <span class="indispensable">必須</span>
             </div>
-            <%= f.collection_select(:monitoring_interval_id, MonitoringInterval.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+            <%= f.collection_select(:monitoring_interval_id, MonitoringInterval.all, :id, :name, {}, {class:"select-box", id:"monitoring-interval"}) %>
             <div class="weight-bold-text">
               初回検査実施日
               <span class="indispensable">必須</span>
             </div>
-            <%= f.text_area :inspection_date, class:"select-box", id:"item-category" %>
+            <%= f.date_select :inspection_date, class:"input-default", id:"inspection-date" %>
+            <div class="sell-btn-contents">
+              <%= f.submit "新規登録" ,class:"sell-btn" %>
+              <%=link_to 'もどる', root_path, class:"back-btn" %>
+            </div>
           </div>
-        </div>
-        <div class="sell-btn-contents">
-          <%= f.submit "新規登録" ,class:"sell-btn" %>
-          <%=link_to 'もどる', root_path, class:"back-btn" %>
         </div>
       </div>
     <% end %>
   </div>
+</div>
 <%= render "shared/second-footer"%>
