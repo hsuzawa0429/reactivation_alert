@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
   get 'messages/index'
   root to: "messages#index"
-  resources :patients
+  resources :patients, only: [:index, :new, :create]
 end

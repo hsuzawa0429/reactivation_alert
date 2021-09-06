@@ -77,7 +77,6 @@
   align-items: flex-end;
 }
 
-
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
@@ -85,10 +84,24 @@
   font-weight: bold;
 }
 
+.diagnosis_and_treatment_dept  {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+.registration {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
 
 .logout {
   text-decoration: none;
   color: #333333;
+  font-weight: bold;
 }
 
 .login {
