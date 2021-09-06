@@ -2,7 +2,7 @@
 <div class="items-sell-contents">
   <div class="items-sell-main">
     <h2 class="items-sell-title">患者情報入力</h2>
-    <%= form_with local: true do |f| %>
+    <%= form_with model: @patient, local: true do |f| %>
 
       <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
       <%# render 'shared/error_messages', model: f.object %>
