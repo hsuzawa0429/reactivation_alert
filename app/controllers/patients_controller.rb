@@ -1,6 +1,6 @@
 class PatientsController < ApplicationController
   def index
-    @patients = Patient.order(id: :DESC)
+    @patients = Patient.all.order(id: :DESC)
   end
 
   def new
@@ -11,7 +11,7 @@ class PatientsController < ApplicationController
     @patient = Patient.new(patient_params)
     if @patient.valid?
       @patient.save
-      redirect_to root_path
+      redirect_to patients_path
     else
       render :new
     end

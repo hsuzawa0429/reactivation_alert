@@ -1,3 +1,47 @@
 <%= render "shared/header" %>
-<P>"成功"</P>
+<body>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      検査実施スケジュール
+    </h2>
+  </div>
+  <div class='table'>
+    <table class='table' border="5" bordercolor="dimgray">
+      <tr>
+        <th class='th'>患者識別コード</th>
+        <th class='th'>診療科</th>
+        <th class='th'>予定検査間隔</th>
+        <th class='th'>初回検査実施日</th>
+        <th class='th'>第２回検査予定日</th>
+        <th class='th'>第３回検査予定日</th>
+        <th class='th'>第４回検査予定日</th>
+        <th class='th'>第５回検査予定日</th>
+        <th class='th'>第６回検査予定日</th>
+        <th class='th'>第７回検査予定日</th>
+        <th class='th'>第８回検査予定日</th>
+        <th class='th'>第９回検査予定日</th>
+        <th class='th'>第10回検査予定日</th>
+        <th class='th'>第11回検査予定日</th>
+      </tr>
+      <% @patients.each do |patient| %>
+        <tr>
+          <td class='td'><%= patient.patient_code %></td>
+          <td class='td'><%= patient.department.name %></td>
+          <td class='td'><%= patient.monitoring_interval.name %></td>
+          <td class='td'><%= patient.inspection_date.strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(3.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(6.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(9.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(12.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(15.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(18.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(21.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(24.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(27.month).strftime("%Y年%m月%d日") %></td>
+          <td class='td' type="date"><%= patient.inspection_date.since(30.month).strftime("%Y年%m月%d日") %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</body>
 <%= render "shared/footer" %>

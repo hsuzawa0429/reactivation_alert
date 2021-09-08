@@ -42,7 +42,7 @@
               初回検査実施日
               <span class="indispensable">必須</span>
             </div>
-            <%= f.date_select :inspection_date, class:"input-default", id:"inspection-date" %>
+            <%= f.date_field :inspection_date, class:"input-default", id:"inspection-date" %>
             <div class="sell-btn-contents">
               <%= f.submit "新規登録" ,class:"sell-btn" %>
               <%=link_to 'もどる', root_path, class:"back-btn" %>

@@ -11,7 +11,7 @@ class Patient < ApplicationRecord
     validates :inspection_date
   end
 
-  with_options numericality: { other_than: 1 , message: "can't be blank"} do
+  with_options numericality: { other_than: 1 } do
     validates :gender_id
     validates :age_id
     validates :department_id
