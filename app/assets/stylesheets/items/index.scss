@@ -302,13 +302,22 @@ a {
 .th{
   width: 7%;
   height: 60px;
-  font-size: 11px;
+  font-size: 20px;
   text-align: center;
+  background-color: dimgray;
+  color: #FFF;
 }
 
 .td{
   width: 7%;
-  font-size: 11px;
+  font-size: 20px;
   height: 60px;
   text-align: center;
+}
+
+.alert{
+  padding: 3px 15px;
+  text-align: center;
+  font-size: 25px;
+  color: red;
 }
