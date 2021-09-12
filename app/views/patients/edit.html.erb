@@ -1,7 +1,7 @@
 <%= render "shared/second-header"%>
 <div class="items-sell-contents">
   <div class="items-sell-main">
-    <h2 class="items-sell-title">患者情報入力</h2>
+    <h2 class="items-sell-title">患者情報編集</h2>
     <%= form_with model: @patient, local: true do |f| %>
 
       <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
@@ -13,7 +13,6 @@
           <div class="form">
             <div class="weight-bold-text">
               患者識別コード
-              <span class="indispensable">必須</span>
             </div>
             <%= f.text_area :patient_code, class:"input-default", id:"patient_code" %>
             <div class="weight-bold-text">
@@ -26,7 +25,6 @@
             <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"patient-age"}) %>
             <div class="weight-bold-text">
               診療科
-              <span class="indispensable">必須</span>
             </div>
             <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"patient-department"}) %>
             <div class="weight-bold-text">
@@ -35,17 +33,16 @@
             <%= f.collection_select(:drug_id, Drug.all, :id, :name, {}, {class:"select-box", id:"patient-drug"}) %>
             <div class="weight-bold-text">
               予定検査間隔
-              <span class="indispensable">必須</span>
             </div>
             <%= f.collection_select(:monitoring_interval_id, MonitoringInterval.all, :id, :name, {}, {class:"select-box", id:"monitoring-interval"}) %>
             <div class="weight-bold-text">
               初回検査実施日
-              <span class="indispensable">必須</span>
             </div>
             <%= f.date_field :inspection_date, class:"input-default", id:"inspection-date" %>
-            <div class="sell-btn-contents">
-              <%= f.submit "新規登録" ,class:"sell-btn" %>
-              <%=link_to 'もどる', root_path, class:"back-btn" %>
+            <div class="btn-contents">
+              <%= f.submit "編集", class:"edit-btn" %>
+              <%= link_to '削除', patient_path, method: :delete, class:"dell-btn" %>
+              <%= link_to 'もどる', root_path, class:"return-btn" %>
             </div>
           </div>
         </div>

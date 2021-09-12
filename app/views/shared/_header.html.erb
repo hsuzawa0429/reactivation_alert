@@ -7,8 +7,6 @@
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-        <li><%= link_to '京都医療センター', root_path, class: "user-nickname" %></li>
-        <li><%= link_to '診療科', root_path, class: "diagnosis_and_treatment_dept" %></li>
         <li><%= link_to '新規患者登録', patients_new_path, class: "registration" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>
