@@ -1,0 +1,53 @@
+<%= render "shared/second-header"%>
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">患者情報編集</h2>
+    <%= form_with model: @patient, local: true do |f| %>
+
+      <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+      <%# render 'shared/error_messages', model: f.object %>
+      <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+
+      <div class="items-detail">
+        <div class="weight-bold-text"></div>
+          <div class="form">
+            <div class="weight-bold-text">
+              患者識別コード
+            </div>
+            <%= f.text_area :patient_code, class:"input-default", id:"patient_code" %>
+            <div class="weight-bold-text">
+              性別
+            </div>
+            <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"patient-gender"}) %>
+            <div class="weight-bold-text">
+              年齢
+            </div>
+            <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"patient-age"}) %>
+            <div class="weight-bold-text">
+              診療科
+            </div>
+            <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"patient-department"}) %>
+            <div class="weight-bold-text">
+              リスク薬剤
+            </div>
+            <%= f.collection_select(:drug_id, Drug.all, :id, :name, {}, {class:"select-box", id:"patient-drug"}) %>
+            <div class="weight-bold-text">
+              予定検査間隔
+            </div>
+            <%= f.collection_select(:monitoring_interval_id, MonitoringInterval.all, :id, :name, {}, {class:"select-box", id:"monitoring-interval"}) %>
+            <div class="weight-bold-text">
+              初回検査実施日
+            </div>
+            <%= f.date_field :inspection_date, class:"input-default", id:"inspection-date" %>
+            <div class="btn-contents">
+              <%= f.submit "編集", class:"edit-btn" %>
+              <%= link_to '削除', patient_path, method: :delete, class:"dell-btn" %>
+              <%= link_to 'もどる', root_path, class:"return-btn" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/second-footer"%>
