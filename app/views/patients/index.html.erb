@@ -17,7 +17,7 @@
       <% @patients.each do |patient| %>
         <tr>
           <% if patient.monitoring_interval_id == 4 %>
-            <td class='td'><%= patient.patient_code %></td>
+            <td class='td'><%= link_to patient.patient_code, edit_patient_path(patient.id), method: :get %></td>
             <td class='td'><%= patient.department.name %></td>
             <td class='td'><%= patient.monitoring_interval.name %></td>
             <td class='td'><%= patient.inspection_date.strftime("%Y年%m月%d日") %></td>
@@ -56,7 +56,7 @@
             <% end %>
           <% end %>
           <% if patient.monitoring_interval_id == 3 %>
-            <td class='td'><%= patient.patient_code %></td>
+            <td class='td'><%= link_to patient.patient_code, edit_patient_path(patient.id), method: :get %></td>
             <td class='td'><%= patient.department.name %></td>
             <td class='td'><%= patient.monitoring_interval.name %></td>
             <td class='td'><%= patient.inspection_date.strftime("%Y年%m月%d日") %></td>
@@ -111,7 +111,7 @@
             <% end %>
           <% end %>
           <% if patient.monitoring_interval_id == 2 %>
-            <td class='td'><%= patient.patient_code %></td>
+            <td class='td'><%= link_to patient.patient_code, edit_patient_path(patient.id), method: :get %></td>
             <td class='td'><%= patient.department.name %></td>
             <td class='td'><%= patient.monitoring_interval.name %></td>
             <td class='td'><%= patient.inspection_date.strftime("%Y年%m月%d日") %></td>
@@ -216,11 +216,11 @@
         </tr>
         <div class='alert'>
           <% if next_inspection_date <= Date.today + 10 && next_inspection_date > Date.today %>
-            <h2>
+            <h2 style="color:blue">
               <%= "#{patient.patient_code}さんの検査日が間近です。" %>
             </h2>
           <% elsif next_inspection_date == Date.today %>
-            <h2>
+            <h2 style="color:red">
               <%= "#{patient.patient_code}さんの検査日当日です。" %>
             </h2>
           <% end %>
