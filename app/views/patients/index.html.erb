@@ -224,6 +224,12 @@
               <%= "#{patient.patient_code}さんの検査日当日です。" %>
             </h2>
           <% end %>
+          <% if next_inspection_date >= Date.today %>
+            <% string1 = "#{patient.patient_code}さんの検査日が間近です。"%>
+            <% string2 = "#{patient.patient_code}さんの検査日当日です。" %>
+            <% string1.clear %>
+            <% string2.clear %>
+          <% end %>
         </div>
       <% end %>
     </table>
