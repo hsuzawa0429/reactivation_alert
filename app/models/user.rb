@@ -10,6 +10,4 @@ class User < ApplicationRecord
 
   validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]/ }
   validates :email, uniqueness: true
-
-  belongs_to :Patient
 end

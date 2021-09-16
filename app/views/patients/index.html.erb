@@ -2,7 +2,7 @@
 <body>
   <div class='title-contents'>
     <h2 class='service-title'>
-      〇〇〇〇病院<br>検査実施スケジュール
+      検査実施スケジュール
     </h2>
   </div>
   <div class='table'>
@@ -23,36 +23,36 @@
             <td class='td'><%= patient.inspection_date.strftime("%Y年%m月%d日") %></td>
             <% if patient.inspection_date.since(3.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(3.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(3.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(3.month) %>
             <% elsif patient.inspection_date.since(6.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(6.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(6.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(6.month) %>
             <% elsif patient.inspection_date.since(9.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(9.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(9.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(9.month) %>
             <% elsif patient.inspection_date.since(12.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(12.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(12.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(12.month) %>
             <% elsif patient.inspection_date.since(15.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(15.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(15.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(15.month) %>
             <% elsif patient.inspection_date.since(18.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(18.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(18.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(18.month) %>
             <% elsif patient.inspection_date.since(21.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(21.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(21.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(21.month) %>
             <% elsif patient.inspection_date.since(24.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(24.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(24.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(24.month) %>
             <% end %>
           <% end %>
           <% if patient.monitoring_interval_id == 3 %>
@@ -62,52 +62,52 @@
             <td class='td'><%= patient.inspection_date.strftime("%Y年%m月%d日") %></td>
             <% if patient.inspection_date.since(2.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(2.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(2.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(2.month) %>
             <% elsif patient.inspection_date.since(4.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(4.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(4.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(4.month) %>
             <% elsif patient.inspection_date.since(6.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(6.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(6.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(6.month) %>
             <% elsif patient.inspection_date.since(8.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(8.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(8.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(8.month) %>
             <% elsif patient.inspection_date.since(10.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(10.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(10.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(10.month) %>
             <% elsif patient.inspection_date.since(12.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(12.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(12.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(12.month) %>
             <% elsif patient.inspection_date.since(14.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(14.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(14.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(14.month) %>
             <% elsif patient.inspection_date.since(16.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(16.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(16.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(16.month) %>
             <% elsif patient.inspection_date.since(18.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(18.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(18.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(18.month) %>
             <% elsif patient.inspection_date.since(20.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(20.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(20.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(20.month) %>
             <% elsif patient.inspection_date.since(22.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(22.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(22.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(22.month) %>
             <% elsif patient.inspection_date.since(24.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(24.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(24.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(24.month) %>
             <% end %>
           <% end %>
           <% if patient.monitoring_interval_id == 2 %>
@@ -117,114 +117,118 @@
             <td class='td'><%= patient.inspection_date.strftime("%Y年%m月%d日") %></td>
            <% if patient.inspection_date.since(1.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(1.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(1.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(1.month) %>
             <% elsif patient.inspection_date.since(2.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(2.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(2.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(2.month) %>
             <% elsif patient.inspection_date.since(3.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(3.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(3.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(3.month) %>
             <% elsif patient.inspection_date.since(4.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(4.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(4.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(4.month) %>
             <% elsif patient.inspection_date.since(5.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(5.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(5.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(5.month) %>
             <% elsif patient.inspection_date.since(6.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(6.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(6.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(6.month) %>
             <% elsif patient.inspection_date.since(7.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(7.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(7.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(7.month) %>
             <% elsif patient.inspection_date.since(8.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(8.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(8.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(8.month) %>
             <% elsif patient.inspection_date.since(9.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(9.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(9.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(9.month) %>
             <% elsif patient.inspection_date.since(10.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(10.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(10.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(10.month) %>
             <% elsif patient.inspection_date.since(11.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(11.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(11.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(11.month) %>
             <% elsif patient.inspection_date.since(12.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(12.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(12.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(12.month) %>
             <% elsif patient.inspection_date.since(13.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(13.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(13.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(13.month) %>
             <% elsif patient.inspection_date.since(14.month) >=Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(14.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(14.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(14.month) %>
             <% elsif patient.inspection_date.since(15.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(15.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(15.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(15.month) %>
             <% elsif patient.inspection_date.since(16.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(16.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(16.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(16.month) %>
             <% elsif patient.inspection_date.since(17.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(17.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(17.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(17.month) %>
             <% elsif patient.inspection_date.since(18.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(18.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(18.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(18.month) %>
             <% elsif patient.inspection_date.since(19.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(19.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(19.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(19.month) %>
             <% elsif patient.inspection_date.since(20.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(20.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(20.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(20.month) %>
             <% elsif patient.inspection_date.since(21.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(21.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(21.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(21.month) %>
             <% elsif patient.inspection_date.since(22.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(22.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(22.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(22.month) %>
             <% elsif patient.inspection_date.since(23.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(23.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(23.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(23.month) %>
             <% elsif patient.inspection_date.since(24.month) >= Date.today %>
               <td class='td' type="date"><%= patient.inspection_date.since(24.month).strftime("%Y年%m月%d日") %></td>
-              <% @next_inspection_date = Time.new %>
-              <% @next_inspection_date = patient.inspection_date.since(24.month) %>
+              <% next_inspection_date = Time.new %>
+              <% next_inspection_date = patient.inspection_date.since(24.month) %>
             <% end %>
           <% end %>
         </tr>
         <div class='alert'>
-          <% if @next_inspection_date <= Date.today + 10 && @next_inspection_date > Date.today %>
+          <% if next_inspection_date <= Date.today + 10 && next_inspection_date > Date.today %>
             <h2 style="color:blue">
               <%= "#{patient.patient_code}さんの検査日が間近です。" %>
             </h2>
-          <% elsif @next_inspection_date == Date.today %>
+          <% elsif next_inspection_date == Date.today %>
             <h2 style="color:red">
               <%= "#{patient.patient_code}さんの検査日当日です。" %>
             </h2>
-          <% elsif @next_inspection_date < Date.today%>
-            <% pass %>
+          <% end %>
+          <% if next_inspection_date >= Date.today %>
+            <% string1 = "#{patient.patient_code}さんの検査日が間近です。"%>
+            <% string2 = "#{patient.patient_code}さんの検査日当日です。" %>
+            <% string1.clear %>
+            <% string2.clear %>
           <% end %>
         </div>
       <% end %>
