@@ -6,10 +6,9 @@ a {
   background: #f8f8f8;
 }
 
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .title-contents {
   width: 100vw;
-  height: 40vw;
+  height: 45vw;
   background-image: image-url('toppage-heder01.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,20 +21,14 @@ a {
 }
 
 .service-title {
-  font-size: 8vh;
+  font-size: 5.5vh;
   font-weight: 900;
 }
 
-.service-explain {
-  font-size: 2.5vh;
-  line-height: 40px;
-}
-
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
-
-/* FURIMAが選ばれる3つの理由部分 */
 .select-reason-contents {
   padding: 10vh 15vw;
+  background-image: image-url('toppage-heder01.jpeg');
+  background-size: cover;
 }
 
 .select-reason-contents>.title {

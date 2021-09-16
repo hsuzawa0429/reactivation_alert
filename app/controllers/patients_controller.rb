@@ -1,6 +1,6 @@
 class PatientsController < ApplicationController
   def index
-    @patients = Patient.all.order(id: :DESC)
+    @patients = Patient.all.order(inspection_date: :DESC)
   end
 
   def new
@@ -42,4 +42,5 @@ class PatientsController < ApplicationController
   def patient_params
     params.require(:patient).permit(:patient_code, :gender_id, :age_id, :department_id, :drug_id, :monitoring_interval_id, :inspection_date)
   end
+
 end
